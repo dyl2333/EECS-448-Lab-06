@@ -18,7 +18,7 @@ int main(int argc, char** argv)
 	//TestSuite myTester;
 	//myTester.runTests();
 	
-	theTestClass theClasser;
+	theTestClass theClasser(testableList);
 	theClasser.runTheTests();
 
 	std::cout << "Running...\nAnd we're done.\nGoodbye.\n";
