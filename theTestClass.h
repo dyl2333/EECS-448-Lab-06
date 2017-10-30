@@ -92,7 +92,7 @@ class theTestClass
 		
 	private:
 		LinkedListOfInts loInts;
-		//bool testItem;
+		bool testItem;
 };
 
 #endif 

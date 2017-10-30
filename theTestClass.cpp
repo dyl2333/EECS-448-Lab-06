@@ -28,12 +28,12 @@ void theTestClass::runTheTests()
 	istrue[0] = test01();
 	istrue[1] = test02();
 	istrue[2] = test03();
-//	istrue[3] = test04();
-//	istrue[4] = test05();
-//	istrue[5] = test06();
-	/*istrue[6] = test07();
+	istrue[3] = test04();
+	istrue[4] = test05();
+	istrue[5] = test06();
+	istrue[6] = test07();
 	istrue[7] = test08();
-	istrue[8] = test09();
+	/*istrue[8] = test09();
 	istrue[9] = test10();
 	istrue[10] = test11();
 	istrue[11] = test12();
@@ -70,9 +70,13 @@ void theTestClass::runTheTests()
 	cout<< "The results of test 1 is : " << forOut[0] << "!\n";
 	cout<< "The results of test 2 is : " << forOut[1] << "!\n";
 	cout<< "The results of test 3 is : " << forOut[2] << "!\n";
-	//cout<< "The results of test 4 is : " << forOut[3] << "!\n";
-	//cout<< "The results of test 5 is : " << forOut[4] << "!\n";
-	//cout<< "The results of test 6 is : " << forOut[5] << "!\n";
+	cout<< "The results of test 4 is : " << forOut[3] << "!\n";
+	cout<< "The results of test 5 is : " << forOut[4] << "!\n";
+	cout<< "The results of test 6 is : " << forOut[5] << "!\n";
+	cout<< "The results of test 7 is : " << forOut[6] << "!\n";
+	cout<< "The results of test 8 is : " << forOut[7] << "!\n";
+	//cout<< "The results of test 9 is : " << forOut[8] << "!\n";
+	
 }
 //remove back on empty list will return false.
 bool theTestClass::test01()
@@ -125,29 +129,95 @@ bool theTestClass::test03()
 
 bool theTestClass::test04()
 {
+	int test4=55;
+	int test3= 33;
+	
+	
+	loInts.addBack(test4);
+	loInts.addBack(test3);
+	
+	if (loInts.size() == 4)
+	{
+		
+		return true;
+	}
+	else
+	{
+		return false;
+	}
 	
 	return true;
 }
 
 bool theTestClass::test05()
 {
-	return true;
+	for (int i = 0; i <10; i++)
+	{
+		loInts.addBack(i);
+	}
+	if (loInts.size() == 14)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
 }
+// im getting an error for some reason
 
+///something in removeback and removefront do not work need to investgate.
 bool theTestClass::test06()
 {
+	bool aBanger = true;
+	/* testItem = false;
+	for (int i = 0; i < 10; i++)
+	{
+		aBanger = loInts.removeBack();
+	}
+	cout << "the size of this item is " << loInts.size() << "\n";
+	cout << aBanger << " what is this \n";
+	
+	if (loInts.size()== 4)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
 
-	return true;
+*/
+
+
+	aBanger = loInts.removeFront();
+	
+	cout << "the size of this item is " << loInts.size() << "\n";
+	cout << aBanger << " what is this \n";
+	
+	if (loInts.size()== 13)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+
 }
 
 bool theTestClass::test07()
 {
+	int i = 55;
+	bool waht = loInts.search(i);
 	
-	return true;
+	
+	return waht;
 }
 
 bool theTestClass::test08()
 {
+	return loInts.isEmpty();
 
 	return true;
 }
@@ -201,11 +271,20 @@ bool theTestClass::test16()
 }
 void theTestClass::removeAllItems()
 {
-	bool theTest;
+	bool theTest = false;
 	int theAmount = loInts.size();
 	
 	for (int i = 1; i <= theAmount; i++)
 	{
 		theTest = loInts.removeBack();
+	}
+	
+	if (theTest)
+	{
+		
+	}
+	else
+	{
+		
 	}
 }
