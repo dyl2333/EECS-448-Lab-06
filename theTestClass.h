@@ -88,9 +88,11 @@ class theTestClass
 		bool test16();
 
 
+		void removeAllItems();
 		
 	private:
 		LinkedListOfInts loInts;
+		//bool testItem;
 };
 
 #endif 
