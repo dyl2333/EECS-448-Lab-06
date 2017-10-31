@@ -1,6 +1,6 @@
 /**
 *	@author Dylan Vondracek
-*	@date 11-5-17
+*	@date 11-6-17
 *	@file main.cpp
 *	@brief driver for LinkedList demo
 */
@@ -21,8 +21,8 @@ int main(int argc, char** argv)
 	theTestClass theClasser(testableList);
 	theClasser.runTheTests();
 
-	std::cout << "Running...\nAnd we're done.\nGoodbye.\n";
-	
+	//std::cout << "Running...\nAnd we're done.\nGoodbye.\n";
+	std::cout<<"Goodbye.\n";
 	return (0);
 
 }

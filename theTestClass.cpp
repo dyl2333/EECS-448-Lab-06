@@ -1,4 +1,9 @@
-
+/**
+*	@file theTestClass.cpp
+*	@author Dylan Vondracek
+*	@date 11-6-17
+*	@brief test class for the list
+*/
 
 
 //#include "LinkedListOfInts.h"
@@ -20,8 +25,7 @@ theTestClass::~theTestClass()
 
 void theTestClass::runTheTests()
 {
-	
-	//redefine the list of tests based on all the new tests I would want to make
+
 	bool istrue[16];
 	string forOut[16];
 	
@@ -35,25 +39,7 @@ void theTestClass::runTheTests()
 	istrue[7] = test08();
 	istrue[8] = test09();
 	istrue[9] = test10();
-	/*istrue[10] = test11();
-	istrue[11] = test12();
-	istrue[12] = test13();
-	istrue[13] = test14();
-	istrue[14] = test15();
-	istrue[15] = test16();	
-	
-	for (int i = 0; i < 16; i++)
-	{
-		if (istrue[i] == true)
-		{
-			forOut[i] = "PASSED";
-		}
-		else
-		{
-			forOut[i] = "FAILED";
-		}
-	}
-*/
+
 
 	for (int i = 0; i < 16; i++)
 	{
@@ -68,15 +54,15 @@ void theTestClass::runTheTests()
 	}
 
 	cout<< "Test 1: List returns false after calling removeBack() on an empty list: " << forOut[0] << "!\n";
-	cout<< "Test 1: List returns false after calling removeFront() on an empty list: " << forOut[1] << "!\n";
-	cout<< "The results of test 3 is : " << forOut[2] << "!\n";
-	cout<< "The results of test 4 is : " << forOut[3] << "!\n";
-	cout<< "The results of test 5 is : " << forOut[4] << "!\n";
-	cout<< "The results of test 6 is : " << forOut[5] << "!\n";
-	cout<< "The results of test 7 is : " << forOut[6] << "!\n";
-	cout<< "The results of test 8 is : " << forOut[7] << "!\n";
-	cout<< "The results of test 9 is : " << forOut[8] << "!\n";
-	cout<< "The results of test 10 is : " << forOut[9] << "!\n";
+	cout<< "Test 2: List returns false after calling removeFront() on an empty list: " << forOut[1] << "!\n";
+	cout<< "Test 3: List returns true if the list is empty, false is otherwise: " << forOut[2] << "!\n";
+	cout<< "Test 4: Test returns true if the size of the list is 2 after calling addFront(int) 2 times: " << forOut[3] << "!\n";
+	cout<< "Test 5: List returns true if the list is empty, false is otherwise: " << forOut[4] << "!\n";
+	cout<< "Test 6: Test returns true if the size of the list is 4 after calling addBack(int) 2 times: " << forOut[5] << "!\n";
+	cout<< "Test 7: Test returns true if the size of the list is 14 after calling addBack(int) 10 times: " << forOut[6] << "!\n";
+	cout<< "Test 8: Test returns true if an item has been removed via removeFront() call from the list, returns false if list is empty: " << forOut[7] << "!\n";
+	cout<< "Test 9: Test returns true if specific number is within the list, return false if number not in list: " << forOut[8] << "!\n";
+	cout<< "Test 8: Test returns true if an item has been removed via removeBack() call from the list, returns false if list is empty: " << forOut[9] << "!\n";
 	
 }
 //remove back on empty list will return false.
@@ -189,39 +175,10 @@ bool theTestClass::test07()
 bool theTestClass::test08()
 {
 	bool aBanger = true;
-	/* testItem = false;
-	for (int i = 0; i < 10; i++)
-	{
-		aBanger = loInts.removeBack();
-	}
-	cout << "the size of this item is " << loInts.size() << "\n";
-	cout << aBanger << " what is this \n";
-	
-	if (loInts.size()== 4)
-	{
-		return true;
-	}
-	else
-	{
-		return false;
-	}
-
-*/
-
 
 	aBanger = loInts.removeFront();
 	
-	cout << "the size of this item is " << loInts.size() << "\n";
-	cout << aBanger << " what is this \n";
-	
-	if (loInts.size()== 13)
-	{
-		return true;
-	}
-	else
-	{
-		return false;
-	}
+	return aBanger;
 
 }
 
@@ -250,69 +207,3 @@ bool theTestClass::test10()
 
 }
 
-bool theTestClass::test11()
-{
-
-	return true;
-}
-
-bool theTestClass::test12()
-{
-	return true;
-
-}
-
-bool theTestClass::test13()
-{
-	
-	return true;
-}
-
-bool theTestClass::test14()
-{
-
-	return true;
-}
-
-bool theTestClass::test15()
-{
-	
-	return true;
-}
-
-bool theTestClass::test16()
-{
-
-	return true;
-}
-
-bool theTestClass::test17()
-{
-
-	return true;
-}
-
-bool theTestClass::test18()
-{
-	return true;
-
-}
-void theTestClass::removeAllItems()
-{
-	bool theTest = false;
-	int theAmount = loInts.size();
-	
-	for (int i = 1; i <= theAmount; i++)
-	{
-		theTest = loInts.removeBack();
-	}
-	
-	if (theTest)
-	{
-		
-	}
-	else
-	{
-		
-	}
-}
