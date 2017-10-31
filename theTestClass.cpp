@@ -33,9 +33,9 @@ void theTestClass::runTheTests()
 	istrue[5] = test06();
 	istrue[6] = test07();
 	istrue[7] = test08();
-	/*istrue[8] = test09();
+	istrue[8] = test09();
 	istrue[9] = test10();
-	istrue[10] = test11();
+	/*istrue[10] = test11();
 	istrue[11] = test12();
 	istrue[12] = test13();
 	istrue[13] = test14();
@@ -67,15 +67,16 @@ void theTestClass::runTheTests()
 		}
 	}
 
-	cout<< "The results of test 1 is : " << forOut[0] << "!\n";
-	cout<< "The results of test 2 is : " << forOut[1] << "!\n";
+	cout<< "Test 1: List returns false after calling removeBack() on an empty list: " << forOut[0] << "!\n";
+	cout<< "Test 1: List returns false after calling removeFront() on an empty list: " << forOut[1] << "!\n";
 	cout<< "The results of test 3 is : " << forOut[2] << "!\n";
 	cout<< "The results of test 4 is : " << forOut[3] << "!\n";
 	cout<< "The results of test 5 is : " << forOut[4] << "!\n";
 	cout<< "The results of test 6 is : " << forOut[5] << "!\n";
 	cout<< "The results of test 7 is : " << forOut[6] << "!\n";
 	cout<< "The results of test 8 is : " << forOut[7] << "!\n";
-	//cout<< "The results of test 9 is : " << forOut[8] << "!\n";
+	cout<< "The results of test 9 is : " << forOut[8] << "!\n";
+	cout<< "The results of test 10 is : " << forOut[9] << "!\n";
 	
 }
 //remove back on empty list will return false.
@@ -105,10 +106,21 @@ bool theTestClass::test02()
 	
 
 }
-
 bool theTestClass::test03()
 {
-
+	if (loInts.isEmpty())
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+	
+	
+}
+bool theTestClass::test04()
+{
 	int test1=5;
 	int test2= 3;
 	
@@ -125,9 +137,16 @@ bool theTestClass::test03()
 	{
 		return false;
 	}
+
 }
 
-bool theTestClass::test04()
+bool theTestClass::test05()
+{
+	return loInts.isEmpty();
+
+}
+
+bool theTestClass::test06()
 {
 	int test4=55;
 	int test3= 33;
@@ -149,7 +168,7 @@ bool theTestClass::test04()
 	return true;
 }
 
-bool theTestClass::test05()
+bool theTestClass::test07()
 {
 	for (int i = 0; i <10; i++)
 	{
@@ -167,7 +186,7 @@ bool theTestClass::test05()
 // im getting an error for some reason
 
 ///something in removeback and removefront do not work need to investgate.
-bool theTestClass::test06()
+bool theTestClass::test08()
 {
 	bool aBanger = true;
 	/* testItem = false;
@@ -206,7 +225,7 @@ bool theTestClass::test06()
 
 }
 
-bool theTestClass::test07()
+bool theTestClass::test09()
 {
 	int i = 55;
 	bool waht = loInts.search(i);
@@ -215,35 +234,32 @@ bool theTestClass::test07()
 	return waht;
 }
 
-bool theTestClass::test08()
-{
-	return loInts.isEmpty();
-
-	return true;
-}
-
-bool theTestClass::test09()
-{
-
-	return true;
-}
-
 bool theTestClass::test10()
 {
-	return true;
+
+	testItem = false;
+	for (int i = 0; i < 10; i++)
+	{
+		testItem = loInts.removeBack();
+	}
+	
+	return testItem;
+	
+
+
 
 }
 
 bool theTestClass::test11()
 {
-	
+
 	return true;
 }
 
 bool theTestClass::test12()
 {
-
 	return true;
+
 }
 
 bool theTestClass::test13()
@@ -260,11 +276,23 @@ bool theTestClass::test14()
 
 bool theTestClass::test15()
 {
-
+	
 	return true;
 }
 
 bool theTestClass::test16()
+{
+
+	return true;
+}
+
+bool theTestClass::test17()
+{
+
+	return true;
+}
+
+bool theTestClass::test18()
 {
 	return true;
 

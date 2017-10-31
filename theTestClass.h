@@ -87,6 +87,14 @@ class theTestClass
 		**/
 		bool test16();
 
+		/**
+		* @brief After creation checks to see if the size is 0
+		**/
+		bool test17();
+				/**
+		* @brief After creation checks to see if the size is 0
+		**/
+		bool test18();
 
 		void removeAllItems();
 		

@@ -1,0 +1,10 @@
+1 - When calling isEmpty() it always returns true stating that the list is empty.
+2 - RemoveFront() and removeBack() do not remove items. (this is caused by isEmpty()).
+the reason that this fails. (when either these functions are called, it first called isEmpty() to verify that there is a list to check.
+if it didn't there is a possible chance for bad memory output. Since isEmpty always calls the true neither of these functions preform their 
+task and send back false stating that the list is empty.
+
+3-(not sure if im dumb or it was a bug but) -- when attempting to call the destructor I get an error stating
+pure virtual method called
+terminate called without an active exception
+(this will not be in my code as it killed my program)
